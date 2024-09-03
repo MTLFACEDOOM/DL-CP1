@@ -1,3 +1,5 @@
 #first proj
+import random
 
-print("Hellow World")
+num = random.randint(1,20)
+print("Hello World", num)
