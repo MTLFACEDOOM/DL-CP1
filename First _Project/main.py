@@ -1,4 +1,4 @@
-#Devin Longtree first project
+#Devin Longtree first project homework
 import random
 
 num = random.randint(1,20)
