@@ -1,5 +1,7 @@
 cel = input("Enter Temperatre in Celsius: ")
 
-far = int(cel*9/5+32)
+cel = int(cel)
 
-print(far)
+far = (cel * 1.8)+32
+
+print("when it is ", cel, "degrees Celsius, it is ", far, "degrees Fahrenhiet")
