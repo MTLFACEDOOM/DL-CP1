@@ -1,6 +1,5 @@
-word = input("Input a word or phrase: ")
+name = input("Input a word or phrase : ")
 
-def cypher(word):
-    word = word+" A "
+length = len(name)
+length = int(length)
 
-print(cypher)
