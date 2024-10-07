@@ -1,7 +1,7 @@
 name = input("Input a word or phrase : ")
 
-length = len(name)
-length = int(length)
+separate = list(name)
+length = len(separate)
 
-def shift():
+if length == 1:
     
