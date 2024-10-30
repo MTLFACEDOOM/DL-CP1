@@ -1,9 +1,11 @@
 #Devin Longtree Shopping List Manager
+thislist = []
 
 def add():
-    input("Enter an item: ")
+    thislist.append(input("Enter an item: "))
+    
 def remove():
-    input("Enter an item: ")
+    thislist.remove(input("Enter an item: "))
 
 
 while True:
@@ -17,11 +19,11 @@ while True:
 
     if action =="1":
          add()
-         print("Your current shooping list is: ")
+         print("Your curent list is:",thislist)
 
     elif action =="2":
         remove()
-
+        print("Your curent list is:",thislist)
     else:
         print("Have a nice day!")
 
