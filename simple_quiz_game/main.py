@@ -12,9 +12,3 @@ question1 = input("""First Question: question 1
 
 if question1 == "a":
     print("Incorrect")
-    if question1 == "b":
-        print("Incorrect") 
-    if question1 == "c":
-        print("Incorrect")
-        if question1 == "a":
-            print("Incorrect")
