@@ -1,0 +1,2 @@
+
+cominput = random.choice(game)
