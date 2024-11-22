@@ -70,6 +70,7 @@ def play():
             printed = True
             print("You put in:",userinput,"the computer put in:", cominput,"You lose. Your score is:", score)
             play_again()
+#Input check            
     while userinput not in game:
         if printed == False:
             printed == True
