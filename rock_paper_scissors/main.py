@@ -1,7 +1,9 @@
 #Devin Longtree [Rock Paper Scissors]
 import random 
 score = 0
+printed1 = False
 game = ["rock", "paper","scissors"]
+choices = ["yes", "no"]
 
 def play():
     global score
@@ -80,6 +82,11 @@ def play():
 choice1 = input("Would you like to play a game? yes/no: ")
 while choice1 == "yes":
     play()
+while choice1 == "no":
+    if printed1 == False:
+        printed1 == True
+        print("Ok then.")
+        break
 
 
 
