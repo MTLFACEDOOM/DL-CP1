@@ -5,24 +5,112 @@ incorrect_answer = ["Oh, so close!", "Not quite right!", "Atleast you did your b
 correct_answer = ["Good Job!", "Correct!", "Not too hard now, is it?"]
 wahoo = random.choice(correct_answer)
 uhoh = random.choice(incorrect_answer)
+answers = ["a", "b", "c", "d"]
 
 def questions():
     global score
-    def q1():
-        question1 = input("""Question 1:
+#Question 5
+    def final():
+        print("You completed the quiz!")
+        print("Your final score is...", score)
+        
+    def easyq1():
+        global score
+        question1 = input("""Easy Question 1:
     a. answer
     b. answer
     c. answer
     d . correct answer
         """)
-        if question1 == "d":
-                print(wahoo)
-                score = score + 1
-                print("Your score is...", score)
-                print("Will you get this next one right?")
-        else:
-            print(uhoh)
-            print("Lets give you an easier one!")
-    q1()
-    print("Did this work?")
+        if question1 not in answers:
+                print("Please put in a, b, c, or d. Try again.")
+                easyq1()
+        if question1 in answers:
+                if question1 != "d":    
+                    print("This is the easiest question, going any easier would be an insult to mankind.")
+                else:
+                    print(wahoo)
+#Question 4
+    def easyq2():
+        global score
+        question1 = input("""Easy Question 2:
+    a. answer
+    b. answer
+    c. answer
+    d . correct answer
+        """)
+        if question1 not in answers:
+                print("Please put in a, b, c, or d. Try again.")
+                easyq2()
+        if question1 in answers:
+                if question1 != "d": 
+                    print(uhoh)   
+                    print("")
+                else:
+                    print(wahoo)
+#Question 3
+    def medq1():
+        global score
+        question1 = input("""Medium Question 1:
+    a. answer
+    b. answer
+    c. answer
+    d . correct answer
+        """)
+        if question1 not in answers:
+                print("Please put in a, b, c, or d. Try again.")
+                medq1()
+        if question1 in answers:
+                if question1 != "d":
+                    print(uhoh)    
+                    print("I thought you could have gotten this one. Let's try oe more time.")
+                    easyq2()
+                else:
+                    score = score + 1
+                    print(wahoo)
+                    easyq2()
+#Question 2
+    def medq2():
+        global score
+        question1 = input("""Medium Question 1:
+    a. answer
+    b. answer
+    c. answer
+    d . correct answer
+        """)
+        if question1 not in answers:
+                print("Please put in a, b, c, or d. Try again.")
+                medq2()
+        if question1 in answers:
+                if question1 != "d": 
+                    print(uhoh)   
+                    print("Okay, maybe this quiz is a bit too hard for someone like you. Let's try again.")
+                    medq1()
+                else:
+                    score = score + 1
+                    print(wahoo)
+                    medq1()
+#Question 1
+    def hardq1():
+        global score
+        question1 = input("""Hard Question 1:
+    a. answer
+    b. answer
+    c. answer
+    d . correct answer
+        """)
+        if question1 not in answers:
+                print("Please put in a, b, c, or d. Try again.")
+                hardq1()
+        if question1 in answers:
+                if question1 != "d":
+                    print(uhoh)  
+                    print("Maybe that one was a little bit too hard. let's try another")
+                    medq2()
+                else:
+                    score = score + 1
+                    print(wahoo)
+                    medq2()
+            
+    hardq1()
 questions()
