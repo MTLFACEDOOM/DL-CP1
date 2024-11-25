@@ -1,4 +1,5 @@
 #Devin Longtree [Simple Quiz Game]
+#What?
 import random
 score = 0
 incorrect_answer = ["Oh, so close!", "Not quite right!", "Atleast you did your best.", "Dawg how did you even get this wrong."]
