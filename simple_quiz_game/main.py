@@ -1,7 +1,7 @@
 #Devin Longtree [Simple Quiz Game]
 import random
 score = 0
-incorrect_answer = ["Oh, so close!", "Not quite right!", "Atleast you did your best.", "Dawg how did you even get this wrong."]
+incorrect_answer = ["Oh, so close!", "Not quite right!", "Atleast you did your best.", "Nuh uh."]
 correct_answer = ["Good Job!", "Correct!", "Not too hard now, is it?"]
 wahoo = random.choice(correct_answer)
 uhoh = random.choice(incorrect_answer)
@@ -9,6 +9,7 @@ answers = ["a", "b", "c", "d"]
 
 def questions():
     global score
+    print("Hello one and all! I am your host [REDACTED]. Today, we'll be quzzing this contestant on their knowledge of... something!")
 #Question 5
     def final():
         print("You completed the quiz!")
@@ -27,9 +28,13 @@ def questions():
                 easyq1()
         if question1 in answers:
                 if question1 != "d":    
-                    print("This is the easiest question, going any easier would be an insult to mankind.")
+                    print("""This is the easiest question, going any lower would be an insult to mankind.
+If god were real he'd pity you.""")
+                    final()
                 else:
+                    score = score + 1
                     print(wahoo)
+                    final()
 #Question 4
     def easyq2():
         global score
@@ -45,9 +50,12 @@ def questions():
         if question1 in answers:
                 if question1 != "d": 
                     print(uhoh)   
-                    print("")
+                    print("There's no going any lower than you. Imbecile.")
+                    easyq1()
                 else:
+                    score = score + 1
                     print(wahoo)
+                    easyq1()
 #Question 3
     def medq1():
         global score
@@ -72,7 +80,7 @@ def questions():
 #Question 2
     def medq2():
         global score
-        question1 = input("""Medium Question 1:
+        question1 = input("""Question 2: In what year did Tyler, the Creator
     a. answer
     b. answer
     c. answer
@@ -93,11 +101,11 @@ def questions():
 #Question 1
     def hardq1():
         global score
-        question1 = input("""Hard Question 1:
-    a. answer
-    b. answer
-    c. answer
-    d . correct answer
+        question1 = input("""Question 1: What was singer and songwriter Tyler Okonma's name before he was 'Tyler, the Creator'?
+    a. Tyler Okonma
+    b. Okonma
+    c. Jayce
+    d. Ace the Creator
         """)
         if question1 not in answers:
                 print("Please put in a, b, c, or d. Try again.")
@@ -113,4 +121,10 @@ def questions():
                     medq2()
             
     hardq1()
-questions()
+
+start = input("Would you like to take a quiz? yes/no: ")
+if start == "yes":
+    print("Alrighty then Let's begin.")
+    questions()
+else:
+     print("Ok then. Go away. I didn't even wanna host this gameshow.")
