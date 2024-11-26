@@ -17,17 +17,17 @@ def questions():
         
     def easyq1():
         global score
-        question1 = input("""Easy Question 1:
-    a. answer
-    b. answer
-    c. answer
-    d . correct answer
+        question1 = input("""What is Tyler Okonma's full name?
+    a. Tyler
+    b. Tyler Okaga
+    c. Tyler Okonma
+    d. Tyler, the Creator
         """)
         if question1 not in answers:
                 print("Please put in a, b, c, or d. Try again.")
                 easyq1()
         if question1 in answers:
-                if question1 != "d":    
+                if question1 != "c":    
                     print("""This is the easiest question, going any lower would be an insult to mankind.
 If god were real he'd pity you.""")
                     final()
@@ -38,11 +38,11 @@ If god were real he'd pity you.""")
 #Question 4
     def easyq2():
         global score
-        question1 = input("""Easy Question 2:
-    a. answer
-    b. answer
-    c. answer
-    d . correct answer
+        question1 = input("""What is Tyler, the Creator's most popular ablum?
+    a. Goblin
+    b. Cherry Bomb
+    c. Flower boy
+    d. Igor
         """)
         if question1 not in answers:
                 print("Please put in a, b, c, or d. Try again.")
@@ -59,17 +59,17 @@ If god were real he'd pity you.""")
 #Question 3
     def medq1():
         global score
-        question1 = input("""Medium Question 1:
-    a. answer
-    b. answer
-    c. answer
-    d . correct answer
+        question1 = input("""What year did Tyler, the Creator release his hit album, flower boy?
+    a. 2019
+    b. 2017
+    c. 2012
+    d. 2009
         """)
         if question1 not in answers:
                 print("Please put in a, b, c, or d. Try again.")
                 medq1()
         if question1 in answers:
-                if question1 != "d":
+                if question1 != "b":
                     print(uhoh)    
                     print("I thought you could have gotten this one. Let's try oe more time.")
                     easyq2()
@@ -80,17 +80,17 @@ If god were real he'd pity you.""")
 #Question 2
     def medq2():
         global score
-        question1 = input("""Question 2: In what year did Tyler, the Creator
-    a. answer
-    b. answer
-    c. answer
-    d . correct answer
+        question1 = input("""In what year did Tyler, the Creator release his first album 'Bastard'?
+    a. 2012
+    b. 2009
+    c. 2008
+    d. 2015
         """)
         if question1 not in answers:
                 print("Please put in a, b, c, or d. Try again.")
                 medq2()
         if question1 in answers:
-                if question1 != "d": 
+                if question1 != "b": 
                     print(uhoh)   
                     print("Okay, maybe this quiz is a bit too hard for someone like you. Let's try again.")
                     medq1()
@@ -101,7 +101,7 @@ If god were real he'd pity you.""")
 #Question 1
     def hardq1():
         global score
-        question1 = input("""Question 1: What was singer and songwriter Tyler Okonma's name before he was 'Tyler, the Creator'?
+        question1 = input("""What was singer and songwriter Tyler Okonma's name before he was 'Tyler, the Creator'?
     a. Tyler Okonma
     b. Okonma
     c. Jayce
