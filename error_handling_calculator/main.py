@@ -1,13 +1,15 @@
 #Devin Longtree [Error Handling Calculator]
 
-num1 = int(input("Input a number: "))
-num2 = int(input("Input a number: "))
-operation = input("""What would you like to do?
-                  a. Addition
-                  b. Subtraction
-                  c. Multiplication
-                  d. Division
-                  """)
+num1 = input("Input a number: ")
+
+try:
+    if type(num1) is int:
+            print("Placeholder")
+except:
+    if type(num1) is not int:
+        print("Please input a number.")
+        
+
 
 
 
