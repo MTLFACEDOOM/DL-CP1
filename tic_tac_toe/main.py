@@ -47,7 +47,7 @@ def comwin():
         print("You Win!")
     if board1[2] == "o" and board2[1] == "o" and board3[0] == "o":
         print("Computer Wins!")
-
+#a
 def complay():
     cominput = random.randint(1,9)
     print(cominput)
