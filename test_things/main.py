@@ -1,38 +1,8 @@
-import random
-board1 = [1,2,3]
-board2 = [4,5,6]
-board3 = [7,8,9]
-def userplay():
-    print(board1)
-    print(board2)
-    print(board3)
-    userinput = int(input("Please enter a number from 1-9: "))
-#board1
-    if userinput == 1:
-        if board1[0] == "x" or board1[0] == "o":
-            print("Sorry! This space is already taken!")
-        elif board1[0] != "x":
-            board1[0] = "x"
-            print(board1)
-            print(board2)
-            print(board3)
-
-    if userinput == 2:
-        if board1[1] == "x" or board1[1] == "o":
-            print("Sorry! This space is already taken!")    
-        elif board1[1] != "x":
-            board1[1] = "x"
-            print(board1)
-            print(board2)
-            print(board3)
-
-    if userinput == 3:
-        if board1[2] == "x" or board1[2] == "o":
-            print("Sorry! This space is already taken!")
-        elif board1[2] != "x":
-            board1[2] = "x"
-            print(board1)
-            print(board2)
-            print(board3)
-
-userplay()
+            if userinput == 1 or userinput == 2 or userinput == 3 or userinput ==4  or userinput == 5 or userinput == 6 or userinput == 7 or userinput == 8 or userinput == 9:
+                if board[userinput-1] != "x" or board[userinput-1] != "o":
+                    board[userinput-1] = "x"
+                    print(board[0:3])
+                    print(board[3:6])
+                    print(board[6:10])
+                    userturn1 = userturn1+1
+                    comturn()
